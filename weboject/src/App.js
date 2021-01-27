@@ -1,7 +1,14 @@
 import "./App.css";
 
-function App() {
-  return <div>dsada</div>;
-}
+import React, { Component } from "react";
+import MainContainer from "./containers/MainContainer";
 
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <MainContainer />
+      </>
+    );
+  }
+}
