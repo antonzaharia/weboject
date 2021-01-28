@@ -8,7 +8,7 @@ global.document = jsdom({
   url: "http://localhost:3000/",
 });
 
-import App from "./App";
+import App from "./App.js";
 
 let rootContainer;
 

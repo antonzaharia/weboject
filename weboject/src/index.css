@@ -8,9 +8,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Raleway", sans-serif;
+  background-color: black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.header {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 30px;
+}
+.menu-btn {
+  margin: 30px;
 }
