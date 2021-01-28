@@ -25,6 +25,12 @@ code {
 .logo {
   margin-left: 30px;
 }
+.logo:hover {
+  cursor: pointer;
+}
 .menu-btn {
   margin: 30px;
+}
+.menu-btn:hover {
+  cursor: pointer;
 }
