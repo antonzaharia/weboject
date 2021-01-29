@@ -60,5 +60,23 @@ body::-webkit-scrollbar-thumb {
 .content {
   height: 1500px;
 }
+.terminal {
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+  border: solid 1px #11cd2f;
+}
+.terminal-top-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #11cd2f;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: black;
+}
+.terminal-top-bar svg {
+  padding-right: 10px;
+}
 .footer {
 }
