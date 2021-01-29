@@ -16,6 +16,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* <Scrollbar> */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+  width: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+/* </Scrollbar>*/
+
 #loading {
   position: fixed;
   top: 50%;
@@ -39,4 +56,9 @@ code {
 }
 .menu-btn:hover {
   cursor: pointer;
+}
+.content {
+  height: 1500px;
+}
+.footer {
 }
