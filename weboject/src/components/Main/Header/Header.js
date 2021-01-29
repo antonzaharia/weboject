@@ -8,7 +8,7 @@ import Divider from "@material-ui/core/Divider";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import ContactMailIcon from "@material-ui/icons/ContactMail";
-import MenuListItem from "./Header/MenuListItem";
+import MenuListItem from "./MenuListItem";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import PermDataSettingIcon from "@material-ui/icons/PermDataSetting";
