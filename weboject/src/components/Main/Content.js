@@ -1,6 +1,7 @@
 import React from "react";
 import MinimizeIcon from "@material-ui/icons/Minimize";
 import CloseIcon from "@material-ui/icons/Close";
+import { makeColumns } from "../../helpers/terminal";
 
 export default function Content() {
   return (
@@ -10,7 +11,7 @@ export default function Content() {
           <MinimizeIcon />
           <CloseIcon />
         </div>
-        <div className="terminal-body"></div>
+        <div className="terminal-body">{makeColumns()}</div>
       </div>
     </div>
   );
