@@ -58,7 +58,6 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .content {
-  height: 1500px;
 }
 .terminal {
   margin: 0 auto;
