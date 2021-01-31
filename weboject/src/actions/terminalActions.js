@@ -1,5 +1,7 @@
 import { makeColumns } from "../helpers/terminal";
 
 export function reload() {
-  dispatch({ type: "RELOAD", action: makeColumns() });
+  return (dispatch) => {
+    dispatch({ type: "RELOAD", payload: makeColumns() });
+  };
 }
