@@ -4,6 +4,12 @@ import CloseIcon from "@material-ui/icons/Close";
 import { makeColumns } from "../../helpers/terminal";
 
 export default function Content() {
+  let generatedColumns = makeColumns();
+  const interval = () => {
+    window.setInterval(function () {
+      generatedColumns = makeColumns();
+    }, 2000);
+  };
   return (
     <div className="content">
       <div className="terminal">
@@ -12,12 +18,12 @@ export default function Content() {
           <CloseIcon />
         </div>
         <div className="terminal-body">
-          {makeColumns().map((column, index) => (
-            <p className="column" key={index}>
-              {column.map((letter) => (
-                <p>{letter}</p>
+          {generatedColumns.map((column, index) => (
+            <div className="column" key={`${index}id`}>
+              {column.map((letter, index) => (
+                <div key={index}>{letter}</div>
               ))}
-            </p>
+            </div>
           ))}
         </div>
       </div>
