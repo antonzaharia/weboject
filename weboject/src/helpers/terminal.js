@@ -14,7 +14,7 @@ export function createArray() {
 }
 export function makeColumns() {
   let output = [];
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 0; i <= 15; i++) {
     output.push(createArray());
   }
   return output;

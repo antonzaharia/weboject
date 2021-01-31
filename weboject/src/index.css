@@ -81,7 +81,11 @@ body::-webkit-scrollbar-thumb {
 }
 .terminal-body {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.column p {
+  color: greenyellow;
 }
 .footer {
 }

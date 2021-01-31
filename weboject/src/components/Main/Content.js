@@ -11,7 +11,15 @@ export default function Content() {
           <MinimizeIcon />
           <CloseIcon />
         </div>
-        <div className="terminal-body">{makeColumns()}</div>
+        <div className="terminal-body">
+          {makeColumns().map((column, index) => (
+            <p className="column" key={index}>
+              {column.map((letter) => (
+                <p>{letter}</p>
+              ))}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
