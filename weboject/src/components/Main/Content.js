@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MinimizeIcon from "@material-ui/icons/Minimize";
 import CloseIcon from "@material-ui/icons/Close";
 import { connect } from "react-redux";
 import { reload } from "../../actions/terminalActions";
 
 function Content({ columns, reload }) {
-  window.setInterval(function () {
-    reload();
-  }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      reload();
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="content">
