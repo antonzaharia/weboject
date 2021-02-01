@@ -87,5 +87,13 @@ body::-webkit-scrollbar-thumb {
 .column div {
   color: greenyellow;
 }
+.main-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.letter {
+  margin-top: 0;
+}
 .footer {
 }

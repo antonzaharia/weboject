@@ -3,12 +3,15 @@ import MinimizeIcon from "@material-ui/icons/Minimize";
 import CloseIcon from "@material-ui/icons/Close";
 import { connect } from "react-redux";
 import { reload } from "../../actions/terminalActions";
+import Column from "../Terminal/Column";
+import MainHead from "../Terminal/MainHead";
 
 function Content({ columns, reload }) {
   useEffect(() => {
     const interval = setInterval(() => {
       reload();
-    }, 2000);
+    }, 500);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -19,13 +22,10 @@ function Content({ columns, reload }) {
           <MinimizeIcon />
           <CloseIcon />
         </div>
+        <MainHead />
         <div className="terminal-body">
           {columns.map((column, index) => (
-            <div className="column" key={`${index}id`}>
-              {column.map((letter, index) => (
-                <div key={index}>{letter}</div>
-              ))}
-            </div>
+            <Column column={column} key={index} />
           ))}
         </div>
       </div>
