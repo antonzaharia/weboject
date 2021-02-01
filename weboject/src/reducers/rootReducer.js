@@ -8,13 +8,22 @@ export default function rootReducer(
     case "RELOAD":
       return { ...state, columns: action.payload };
     case "ADD_LETTER":
-      let columnsToAdd = state.columns.filter(
-        (arr) => arr.id !== action.payload
-      );
-      let arrToAdd = state.columns.find((arr) => arr.id === action.payload);
-      arrToAdd.column.push(ABC[randomNumber()]);
-      console.log(arrToAdd);
-      return { ...state, columns: [...columnsToAdd, arrToAdd] };
+      let letterAdded = state.columns.map((column) => {
+        if (column.id === action.payload) {
+          let newColumn = column.column;
+          newColumn.push(ABC[randomNumber()]);
+          return {
+            id: column.id,
+            column: newColumn,
+          };
+        } else {
+          return column;
+        }
+      });
+      return {
+        ...state,
+        columns: letterAdded,
+      };
     default:
       return state;
   }
