@@ -1,16 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addLetter } from "../../actions/terminalActions";
 
-import gsap from "gsap";
-
-export default class Column extends Component {
-  componentDidUpdate() {
-    gsap.fromTo(".column", { opacity: 1 }, { opacity: 0.2, duration: 0.5 });
-    gsap.to(".letter", { marginTop: 10, duration: 0.5 });
-  }
+class Column extends Component {
+  componentDidMount() {}
   render() {
     return (
-      <div className="column">
-        {this.props.column.map((letter, index) => (
+      <div
+        className="column"
+        onClick={() => this.props.addLetter(this.props.column.id)}
+      >
+        {this.props.column.column.map((letter, index) => (
           <div className="letter" key={index}>
             {letter}
           </div>
@@ -19,3 +19,7 @@ export default class Column extends Component {
     );
   }
 }
+const mapDispatchToProps = (dispatch) => ({
+  addLetter: (id) => dispatch(addLetter(id)),
+});
+export default connect(null, mapDispatchToProps)(Column);

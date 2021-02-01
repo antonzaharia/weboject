@@ -1,6 +1,6 @@
-const ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+export const ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-function randomNumber() {
+export function randomNumber() {
   return Math.floor(Math.random() * 26) + 1 - 1;
 }
 
@@ -15,7 +15,7 @@ export function createArray() {
 export function makeColumns() {
   let output = [];
   for (let i = 0; i <= 15; i++) {
-    output.push(createArray());
+    output.push({ id: i, column: createArray() });
   }
   return output;
 }

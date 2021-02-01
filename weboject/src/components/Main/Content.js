@@ -6,14 +6,14 @@ import { reload } from "../../actions/terminalActions";
 import Column from "../Terminal/Column";
 import MainHead from "../Terminal/MainHead";
 
-function Content({ columns, reload }) {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      reload();
-    }, 500);
+function Content({ columns, reload, addLetter }) {
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     reload();
+  //   }, 500);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="content">
