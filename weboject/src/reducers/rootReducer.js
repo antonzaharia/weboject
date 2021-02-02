@@ -28,9 +28,10 @@ export default function rootReducer(
       let removedLetter = state.columns.map((column) => {
         if (column.id === action.payload) {
           let newColumn = column.column;
+          newColumn.shift();
           return {
             id: column.id,
-            column: newColumn.shift(),
+            column: newColumn,
           };
         } else {
           return column;
