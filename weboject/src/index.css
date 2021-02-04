@@ -96,4 +96,8 @@ body::-webkit-scrollbar-thumb {
   margin-top: 0;
 }
 .footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
 }

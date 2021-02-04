@@ -1,5 +1,10 @@
 import React from "react";
 
 export default function Footer() {
-  return <div className="footer">footer</div>;
+  const year = new Date().getFullYear();
+  return (
+    <div className="footer">
+      <div> &#174; weboject {year}</div>
+    </div>
+  );
 }
