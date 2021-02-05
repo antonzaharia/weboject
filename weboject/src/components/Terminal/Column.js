@@ -9,7 +9,7 @@ import Letter from "./Letter";
 class Column extends Component {
   componentDidMount() {
     setInterval(() => {
-      if (this.props.column.column.length > randomNumber() - 2) {
+      if (this.props.column.column.length > randomNumber() - 5) {
         gsap.to(".letter", { opacity: 0.5, duration: 1 });
         this.props.removeLetter(this.props.column.id);
       } else {

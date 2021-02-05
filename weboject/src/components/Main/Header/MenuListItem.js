@@ -1,23 +1,45 @@
-import React from "react";
-
 import { Avatar } from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
-export default function MenuListItem({ text, icon }) {
-  const Icon = icon;
-  const handleClick = (event) => {
-    console.log(event.target.name);
+import { BrowserRouter, Redirect } from "react-router-dom";
+
+import React, { Component } from "react";
+
+export default class MenuListItem extends Component {
+  state = {
+    redirect: false,
   };
-  return (
-    <ListItem button onClick={handleClick}>
-      <ListItemIcon>
-        <Avatar>
-          <Icon style={{ color: "black" }} />
-        </Avatar>
-      </ListItemIcon>
-      <ListItemText primary={text} />
-    </ListItem>
-  );
+  path = `/${this.props.text.toLowerCase()}`;
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true,
+    });
+  };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return (
+        <BrowserRouter>
+          <Redirect push to={this.path} />
+        </BrowserRouter>
+      );
+    }
+  };
+
+  render() {
+    return (
+      <ListItem button onClick={this.setRedirect}>
+        {this.renderRedirect()}
+        <ListItemIcon>
+          <Avatar>
+            <this.props.icon style={{ color: "black" }} />
+          </Avatar>
+        </ListItemIcon>
+        <ListItemText primary={this.props.text} />
+      </ListItem>
+    );
+  }
 }
