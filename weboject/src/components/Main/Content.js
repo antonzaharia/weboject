@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MinimizeIcon from "@material-ui/icons/Minimize";
 import CloseIcon from "@material-ui/icons/Close";
 import { connect } from "react-redux";

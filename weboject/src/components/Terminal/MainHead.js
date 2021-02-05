@@ -13,7 +13,7 @@ export default class MainHead extends Component {
         this.show = `${this.show}${this.text[this.count]}`;
         this.count++;
       }
-    }, 500);
+    }, 300);
     setInterval(() => {
       gsap.to(".typer", { opacity: 1 });
     }, 1000);
