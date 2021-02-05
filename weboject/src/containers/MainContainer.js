@@ -11,10 +11,10 @@ export default class MainContainer extends Component {
         <Header />
         <Router>
           <Route exact path="/" component={Content} />
-          <Route exact path="/work" component={Content} />
-          <Route exact path="/tech" component={Content} />
-          <Route exact path="/message-us" component={Content} />
-          <Route exact path="/team" component={Content} />
+          <Route path="/work" component={Content} />
+          <Route path="/technologies" component={Content} />
+          <Route path="/send-us-a-message" component={Content} />
+          <Route path="/meet-the-team" component={Content} />
         </Router>
         <Footer />
       </div>
