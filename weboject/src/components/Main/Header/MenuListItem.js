@@ -11,7 +11,10 @@ export default class MenuListItem extends Component {
   state = {
     redirect: false,
   };
-  path = `/${this.props.text.split(" ").join("-").toLowerCase()}`;
+  path =
+    this.props.text === "Home"
+      ? "/"
+      : `/${this.props.text.split(" ").join("-").toLowerCase()}`;
 
   setRedirect = () => {
     this.setState({
